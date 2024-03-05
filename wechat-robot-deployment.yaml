@@ -4,10 +4,15 @@ metadata:
   name: wechat-robot
   namespace: wechat-robot
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: wechat-robot
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 50%
+      maxUnavailable: 50%
   template:
     metadata:
       labels:

@@ -19,3 +19,5 @@ kubectl apply -f wechat-robot-deployment.yaml
 ```shell
 kubectl apply -f wechat-robot-service.yaml
 ```
+
+通过访问本地IP+30080即可访问服务
